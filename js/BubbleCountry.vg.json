@@ -1,0 +1,123 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "width": 700,
+ "height": 600,
+ "title": "GDP/Capita and Life Expentancy",
+ "data": {
+ "url": "https://raw.githubusercontent.com/Heshanhaputanthri/brand/main/data/vis2-updated3.csv"
+ },
+
+ "params": [
+ {
+ "name": "Continent_selection",
+ "bind": {
+ "input": "select",
+ "options": [
+ null,
+ "North America",
+ "South America",
+ "Europe",
+ "Africa",
+ "Asia",
+ "Oceania"
+ ],
+ "labels":[
+ "Show All",
+ "North America",
+ "South America",
+ "Europe",
+ "Africa",
+ "Asia",
+ "Oceania"
+ ],
+ "name": "Continent Selection: "
+ }
+ }
+ ],
+
+ "transform": [
+ {"filter": "datum.GDP > 0"},
+ {"filter": "datum.LifeExpectancy > 0"},
+ {"filter": "Continent_selection == null || datum.Continent == Continent_selection"}
+ ],
+
+"selection": {
+    "continent_highlight": {
+    "type": "multi",
+    "fields": ["Continent"],
+    "bind": "legend"
+    }
+ },
+
+ "mark": "circle",
+ "encoding": {
+ "x": {
+ "field": "GDP",
+ "type": "quantitative",
+ "title": "GDP/CAPITA",
+ "scale": {"type": "log", "domain": [200, 200000]},
+  "axis": {"tickCount": 3}
+ },
+ "y": {
+ "field": "LifeExpectancy",
+ "type": "quantitative",
+ "scale": {"domain": [50, 90]}, 
+ "axis": {"tickCount": 8}
+ },
+ "color": {
+ "field": "Continent",
+ "type": "nominal"
+ },
+ "size": {
+ "field": "Population",
+ "type": "quantitative"
+ },
+
+ "color": {
+ "field": "Continent",
+ "type": "nominal",
+ "scale": {
+ "domain": [
+ "North America",
+ "South America",
+ "Europe",
+ "Africa",
+ "Asia",
+ "Oceania"
+ ],
+ "range": [
+ "#e41a1c",
+ "#984ea3",
+ "#ff7f00",
+ "#a6cee3",
+ "#377eb8",
+ "#a65628"
+ ]
+ }
+ },
+ 
+"opacity": {
+ "condition": {"selection": "continent_highlight", "value": 0.7},
+ "value": 0.2
+ },
+
+  "size": {
+ "field": "Population",
+ "type": "quantitative",
+ "scale": {
+ "type": "threshold",
+ "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+ "range": [10, 50, 150, 200, 300, 400]
+ },
+ "legend": {"format": ".1s"}
+ },
+
+ "tooltip": [
+  {"field": "Country", "type": "nominal"},
+ {"field": "GDP", "type": "quantitative"},
+ {"field": "LifeExpectancy", "type": "quantitative", "format": ".0f"},
+ {"field": "Continent", "type": "nominal"},
+ {"field": "Population", "type": "quantitative", "format": ","}
+ ]
+ }
+}
