@@ -55,8 +55,15 @@
   
   <div>
     
-    This is the division to put the world map in 
-    <p> This is where you can write about the map and that.</p>
+    <div id="Map"></div>
+
+<script type="text/javascript">
+
+  var spec2 = "js/Map.vg.json";
+  vegaEmbed('#Map', spec2).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
   
   </div>
   
