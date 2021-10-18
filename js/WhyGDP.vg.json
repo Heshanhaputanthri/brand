@@ -1,0 +1,52 @@
+{
+ "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+ "width": 700,
+ "height": 600,
+ "title": "GDP and Happiness Index",
+ "data": {
+ "url": "https://raw.githubusercontent.com/Heshanhaputanthri/brand/main/data/2020-Happy-GDP.csv"
+ },
+ "mark": "circle",
+ "encoding": {
+ "x": {
+ "field": "GDPCAPLOG",
+ "type": "quantitative",
+ "title": "Logged GDP per Capita",
+  "scale": {"domain": [6, 12]},
+"axis": {"tickCount": 7}
+ },
+
+ "color": {
+ "field": "LifeChoiceFreedom",
+ "type": "quantitative",
+ "scale": {"range": ["red", "blue"]},
+ "title": "Freedom"
+ },
+
+ "size": {
+ "field": "LifeChoiceFreedom",
+ "type": "quantitative",
+ "scale": {
+ "type": "log",
+ "domain": [0.2, 0.6, 0.86, 0.9],
+ "range": [10, 20, 100, 200]
+ },
+ "legend": null,
+ "title": "Freedom "
+ },
+ 
+ "y": {
+ "field": "Happiness",
+ "type": "quantitative",
+ "scale": {"domain": [1, 8]},
+ "axis": {"tickCount": 7}
+ },
+
+  "tooltip": [
+  {"field": "Country", "type": "nominal"},
+ {"field": "GDPCAPLOG", "type": "quantitative", "format": ".1f", "title": "Logged GDP/CAP"},
+ {"field": "Happiness", "type": "quantitative", "format": ".0f"},
+ {"field": "LifeChoiceFreedom", "type": "quantitative", "format": ".2f", "title": "Perceived Freedom"}
+ ]
+ }
+}
