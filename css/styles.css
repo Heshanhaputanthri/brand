@@ -1,3 +1,31 @@
+body {
+	background-color: #FFFFFF;
+    font-family: Verdana, Geneva, sans-serif;
+    align-content: center;}
+
+    {box-sizing: border-box;
+    }
+    /* Set additional styling options for the columns*/
+
+.column {
+float: left;
+width: 50%;
+}
+  
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+.page {
+    width: 500px;
+    margin: auto;
+    padding: 40px;
+    padding-top: 10px;
+    background-color: papayawhip;
+}
+
 #scatter_plot {
 	top:100px;
 	bottom: 100px; 
@@ -9,31 +37,3 @@
 
 .lw { font-size: 60px; }
 .lv { font-size: 20px;}
-
-body {
-	background-color: #FFFFFF;
-    font-family: Verdana, Geneva, sans-serif;
-    align-content: center;}
-
-    {box-sizing: border-box;
-    }
-    /* Set additional styling options for the columns*/
-
-    .column {
-    float: left;
-    width: 50%;
-    }
-  
-    .row:after {
-    content: "";
-    display: table;
-    clear: both;
-    }
-
-.page {
-    width: 500px;
-    margin: auto;
-    padding: 40px;
-    padding-top: 10px;
-    background-color: papayawhip;
-}
