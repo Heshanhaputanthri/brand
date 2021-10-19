@@ -1,7 +1,7 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
- "width": 700,
- "height": 600,
+ "width": 300,
+ "height": 300,
  "title": "GDP/Capita and Life Expentancy",
  "data": {
  "url": "https://raw.githubusercontent.com/Heshanhaputanthri/brand/main/data/vis2-updated3.csv"
