@@ -1,10 +1,7 @@
 body {
 	background-color: #FFFFFF;
-    font-family: Verdana, Geneva, sans-serif;
+    font-family: Cambria, Georgia, serif, Geneva, sans-serif;
     align-content: center;}
-
-    {box-sizing: border-box;
-    }
     /* Set additional styling options for the columns*/
 
 .column {
@@ -42,6 +39,7 @@ clear: both;
 	right: 100px;
 	/*height: 1000px;
 	width: 800px;*/
+	font-size: 20px;
 }
 
 .lw { font-size: 60px; }
