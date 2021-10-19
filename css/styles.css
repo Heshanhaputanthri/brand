@@ -5,40 +5,25 @@ body {
 
     {box-sizing: border-box;
     }
+    /* Set additional styling options for the columns*/
+
+    .column {
+    float: left;
+    width: 50%;
+    }
   
-.row:after {
-content: "";
-display: table;
-clear: both;
-}
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
 
 .page {
-    width: 1200px;
+    width: 1200;
     margin: auto;
-    padding: 40px;
-    padding-top: 10px;
+    padding: 60px;
+    padding-tdop: 10px;
     background-color: #FAEBD7;
     font-size: 20px;
+    
 }
-
-#scatter_plot {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
-}
-
-#Map {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
-	/*height: 1000px;
-	width: 800px;*/
-	
-}
-
-.lw { font-size: 60px; }
-.lv { font-size: 20px;}
