@@ -1,7 +1,7 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
- "width": 300,
- "height": 300,
+ "width": 500,
+ "height": 500,
  "title": "GDP and Happiness Index",
  "data": {
  "url": "https://raw.githubusercontent.com/Heshanhaputanthri/brand/main/data/2020-Happy-GDP.csv"
