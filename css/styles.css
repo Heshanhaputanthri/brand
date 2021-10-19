@@ -1,13 +1,10 @@
 body {
 	background-color: #FFFFFF;
-    font-family: Cambria, Georgia, serif, Geneva, sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
     align-content: center;}
-    /* Set additional styling options for the columns*/
 
-.column {
-float: left;
-width: 50%;
-}
+    {box-sizing: border-box;
+    }
   
 .row:after {
 content: "";
