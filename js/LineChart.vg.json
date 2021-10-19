@@ -2,8 +2,8 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"url": "https://raw.githubusercontent.com/Heshanhaputanthri/brand/main/data/lineData-updated3.csv"},
     "title": "Top Countries - GDP Growth Over time",
-  "width": 700,
-  "height": 500,
+  "width": 300,
+  "height": 300,
   "encoding": {"x": {"field": "Year", "type": "quantitative","axis": {"tickCount": 5},
     "scale":{"domain" : [1990,2020]}}},
   "layer": [
