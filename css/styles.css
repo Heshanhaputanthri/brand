@@ -17,7 +17,12 @@ body {
 
     .column {
     float: left;
-    width: 50%;
+    width: 60%;
+    }
+	
+    .column2 {
+    float: left;
+    width: 35%;
     }
   
     .row:after {
