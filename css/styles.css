@@ -17,7 +17,8 @@ clear: both;
     margin: auto;
     padding: 40px;
     padding-top: 10px;
-    background-color: papayawhip;
+    background-color: #FAEBD7;
+    font-size: 20px;
 }
 
 #scatter_plot {
@@ -36,7 +37,7 @@ clear: both;
 	right: 100px;
 	/*height: 1000px;
 	width: 800px;*/
-	font-size: 20px;
+	
 }
 
 .lw { font-size: 60px; }
