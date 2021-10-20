@@ -50,11 +50,6 @@
   <center><h4>Which continents have the strongest Economies?</h4></center>
   <div class="row">
     
-    <div class="column2">
-          <p align="justify">Higher levels of GDP per Capita are associated with higher life expectancies. European countries tend to have <b>high GDP per Capita</b> due to the <b>abundance of Tourism, Human Capitan and Technology.</b> </p></p>African countries tend to deal with <b>military dictatorships, corruption, civil unrest, underdevelopment and deep poverty </b> which impacts the continents <b>slow economic growth</b></p>
-          
-          <p align="justify">Countries in the Asian continent tend to perform better than African countries on avergae due to the absense of deep poverty however do not perform as well as European countries due to the lack of Tourism and cutting edge Technology </p>
-        </div>
         <div class="column">
           
           <div id="BubbleCountry"></div>
@@ -67,6 +62,11 @@
                   }).catch(console.error);
                 </script>
         </div>
+      <div class="column2">
+          <p align="justify">Higher levels of GDP per Capita are associated with higher life expectancies. European countries tend to have <b>high GDP per Capita</b> due to the <b>abundance of Tourism, Human Capitan and Technology.</b> </p></p>African countries tend to deal with <b>military dictatorships, corruption, civil unrest, underdevelopment and deep poverty </b> which impacts the continents <b>slow economic growth</b></p>
+          
+          <p align="justify">Countries in the Asian continent tend to perform better than African countries on avergae due to the absense of deep poverty however do not perform as well as European countries due to the lack of Tourism and cutting edge Technology </p>
+        </div>
         
     </div>
   <br/>
@@ -76,7 +76,7 @@
     <center><h4>GDP per Capita for all countries</h4>
     <p>Hover over a country to see information regarding GDP</p>
       <p>Filter by continent to comapre GDP performance within a continent</p>
-    </center>
+    
     <div id="Map"></div>
 
 <script type="text/javascript">
@@ -85,7 +85,7 @@
   vegaEmbed('#Map', spec2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
-</script>
+</script></center>
   
   </div>
   
