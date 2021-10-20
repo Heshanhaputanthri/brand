@@ -55,14 +55,14 @@
  "field": "GDP",
  "type": "quantitative",
  "title": "GDP/CAPITA",
- "scale": {"type": "log", "domain": [200, 200000]},
-  "axis": {"tickCount": 3}
+ "scale": {"type": "log", "domain": [200, 116000]},
+  "axis": {"tickCount": 2}
  },
  "y": {
  "field": "LifeExpectancy",
  "type": "quantitative",
  "scale": {"domain": [50, 90]}, 
- "axis": {"tickCount": 8}
+ "axis": {"tickCount": 3}
  },
  "color": {
  "field": "Continent",
@@ -76,7 +76,6 @@
 
  "color": {
  "field": "Continent",
- "legend": {"orient": "left"},
  "type": "nominal",
  "scale": {
  "domain": [
@@ -111,7 +110,7 @@
  "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
  "range": [10, 50, 150, 200, 300, 400]
  },
- "legend": {"format": ".1s","orient": "left"}
+ "legend": {"format": ".1s"}
  },
 
  "tooltip": [
