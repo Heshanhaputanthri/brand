@@ -2,6 +2,17 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"url": "https://raw.githubusercontent.com/Heshanhaputanthri/brand/main/data/lineData-updated3.csv"},
   "params": [
+    {
+ "name": "Year_Above",
+ "value": 0,
+ "bind": {
+ "input": "range",
+ "min": 1990,
+ "max": 2020,
+ "step": 1,
+ "name": "From Year: "
+ }
+ },
  {
  "name": "Continent_selection",
  "bind": {
@@ -26,9 +37,8 @@
  }
  }
  ],
-
  "transform": [
- {"filter": "Continent_selection == null || datum.Country == Continent_selection"}
+ {"filter": "Continent_selection == null || datum.Country == Continent_selection"},{"filter": "datum.Year > Year_Above"}
  ],
 
   "config" : {"background": "#FAEBD7"},
