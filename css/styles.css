@@ -32,12 +32,12 @@ body {
     clear: both;
     }
 
-#choropleth_map {
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
-	background-color: black;
+#map {
+	top:10px;
+	bottom: 10px; 
+	left: 20px;
+	right: 20px;
+	
 	/*height: 1000px;
 	width: 800px;*/
 }
