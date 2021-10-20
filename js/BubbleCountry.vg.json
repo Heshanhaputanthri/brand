@@ -1,13 +1,12 @@
 {
  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
- "width": 700,
- "height": 700,
+ "width": 800,
+ "height": 800,
  "title": "GDP/Capita and Life Expentancy",
  "data": {
  "url": "https://raw.githubusercontent.com/Heshanhaputanthri/brand/main/data/vis2-updated3.csv"
  },
- "config" : {"background": "#FAEBD7"},
-
+"config" : {"background": "#FAEBD7"},
  "params": [
  {
  "name": "Continent_selection",
@@ -69,6 +68,7 @@
  "field": "Continent",
  "type": "nominal"
  },
+
  "size": {
  "field": "Population",
  "type": "quantitative"
@@ -76,6 +76,7 @@
 
  "color": {
  "field": "Continent",
+ "legend": {"orient": "left"},
  "type": "nominal",
  "scale": {
  "domain": [
@@ -110,7 +111,7 @@
  "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
  "range": [10, 50, 150, 200, 300, 400]
  },
- "legend": {"format": ".1s"}
+ "legend": {"format": ".1s","orient": "left"}
  },
 
  "tooltip": [
