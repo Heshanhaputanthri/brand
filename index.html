@@ -19,10 +19,23 @@
   <br/>
   <p align="justify">Gross domestic product (GDP) is the total monetary or market value of all the finished goods and services produced within a country over a certain time period. It is an indicator of the economies size and performance. GDP per Capita is the GDP per indivisual within the country. It is a useful metric to make cross-country comparisons of average living standards.</p>
   
-   <p align="justify"> GDP per Capita strongly correlates with a number of metrics and indicaotrs which measure the general living standards of an economy such as life expectancy, happiness and freedom to maake life choices.</p>
+   <p align="justify"> GDP per Capita strongly correlates with a number of metrics and indicaotrs which measure the general living standards of an economy such as life expectancy, happiness and freedom to make life choices.</p>
   
-  <center><h4>Are countries with higher GDP per Capita Happier?</h4></center>
-  
+  <div id="HeatMap"></div>
+
+                <script type="text/javascript">
+
+                  var spec2 = "js/HeatMap.vg.json";
+                  vegaEmbed('#HeatMap', spec2).then(function(result) {
+                    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                  }).catch(console.error);
+                </script>
+    
+    <br/><br/>
+    
+    <center><h4>Are countries with higher GDP per Capita Happier?</h4></center>
+  <br/><br/>
+    
   <div class="row">
         <div class="column">
           
@@ -39,16 +52,6 @@
         </div>
         <div class="column2">
           
-           <div id="HeatMap"></div>
-
-                <script type="text/javascript">
-
-                  var spec2 = "js/HeatMap.vg.json";
-                  vegaEmbed('#HeatMap', spec2).then(function(result) {
-                    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-                  }).catch(console.error);
-                </script>
-          
           <p align="justify">There is a strong correlation between GDP per Capita, happiness as well as freedom to make life choices. </p> <p>Countries with <b>higher GDP per Capita</b> tend to be countries with <b>lower rates of unemployment</b> which also plays a role in the metrics explored in the graphs. </p>
           
           <p align="justify">This is mainly due to the increased disposable income as a result of increased per capita income.</p>
@@ -58,7 +61,12 @@
   <br/>
   <br/>
   
-  <center><h4>Which continents have the strongest Economies?</h4></center>
+  <center><h2>Which continents have the strongest Economies?</h2>
+    <p>Hover over the plot for more information!</p>
+    <p>Filer out a continent or click the continent on the legend!</p>
+    
+    </center>
+    <br/><br/>
   <div class="row">
     
         <div class="column">
