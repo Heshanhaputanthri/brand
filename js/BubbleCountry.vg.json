@@ -6,6 +6,7 @@
  "data": {
  "url": "https://raw.githubusercontent.com/Heshanhaputanthri/brand/main/data/vis2-updated3.csv"
  },
+ "config" : {"background": "#FAEBD7"},
 
  "params": [
  {
