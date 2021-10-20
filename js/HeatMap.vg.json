@@ -1,0 +1,39 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+      "url": "https://raw.githubusercontent.com/Heshanhaputanthri/brand/main/data/heatMod3.csv"
+  },
+  "title": "Factors effecting GDP per Capita",
+  "config": {
+      "axis": {
+          "domain": false
+      }
+  },
+  "width": 700,
+  "height": 300,
+  "mark": "rect",
+   "config": {
+    "background": "#FAEBD7"
+  },
+  "encoding": {
+      "x": {
+          "field": "value",
+          "type": "ordinal",
+          "title": "Relative Change in GDP"
+      },
+      "y": {
+          "field": "metric",
+          "type": "ordinal",
+          "title": "Economic Indicator"
+      },
+      "color": {
+          "field": "axis",
+          "aggregate": "mean",
+          "scale": {"type": "linear", "range": ["#5D3A9B","#E66100"]},
+          "type": "quantitative",
+          "legend": {
+              "title": "Indicator Scale"
+          }
+      }
+  }
+}
