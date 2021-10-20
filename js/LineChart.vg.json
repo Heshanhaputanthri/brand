@@ -1,6 +1,38 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "data": {"url": "https://raw.githubusercontent.com/Heshanhaputanthri/brand/main/data/lineData-updated3.csv"},
+  "params": [
+ {
+ "name": "Continent_selection",
+ "bind": {
+ "input": "select",
+ "options": [
+ null,
+ "Luxembourg",
+ "Switzerland",
+ "Norway",
+ "America",
+ "Australia"
+ ],
+ "labels":[
+ "Show All",
+ "Luxembourg",
+ "Switzerland",
+ "Norway",
+ "America",
+ "Australia"
+ ],
+ "name": "Continent Selection: "
+ }
+ }
+ ],
+
+ "transform": [
+ {"filter": "Continent_selection == null || datum.Country == Continent_selection"}
+ ],
+
+  "config" : {"background": "#FAEBD7"},
+
     "title": "Top Countries - GDP Growth Over time",
   "width": 700,
   "height": 700,
@@ -10,18 +42,44 @@
     {
       "encoding": {
         "color": {"field": "Country", "type": "nominal"},
-        "y": {"field": "GDPCAP", "type": "quantitative", "axis": {"tickCount": 5}}
+        "y": {"field": "GDPCAP", "type": "quantitative", "axis": {"tickCount": 5},"scale":{"domain" : [0,120000]}}, 
+
+  "color": {
+ "field": "Country",
+ "type": "nominal",
+ "scale": {
+ "domain": [
+ "Luxembourg",
+ "Switzerland",
+ "Norway",
+ "America",
+ "Australia"
+ ],
+ "range": [
+ "#e41a1c",
+ "#984ea3",
+ "#ff7f00",
+ "#a6cee3",
+ "#377eb8",
+ "#a65628"
+ ]
+ }
+ }
       },
       "layer": [
         {    "mark": {
     "type": "line",
     "clip": true
   }},
-        {"transform": [{"filter": {"selection": "hover"}}], "mark": "point"}
+        {"transform": [
+          
+          {"filter": {"selection": "hover"}}
+], "mark": "point"}
       ]
     },
     {
-      "transform": [{"pivot": "Country", "value": "GDPCAP", "groupby": ["Year"]}],
+      "transform": [
+        {"pivot": "Country", "value": "GDPCAP", "groupby": ["Year"]}],
       "mark": {"type":"rule","clip":true},
       "encoding": {
         "opacity": {
