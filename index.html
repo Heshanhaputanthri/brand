@@ -38,6 +38,17 @@
           
         </div>
         <div class="column2">
+          
+           <div id="HeatMap"></div>
+
+                <script type="text/javascript">
+
+                  var spec2 = "js/HeatMap.vg.json";
+                  vegaEmbed('#HeatMap', spec2).then(function(result) {
+                    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+                  }).catch(console.error);
+                </script>
+          
           <p align="justify">There is a strong correlation between GDP per Capita, happiness as well as freedom to make life choices. </p> <p>Countries with <b>higher GDP per Capita</b> tend to be countries with <b>lower rates of unemployment</b> which also plays a role in the metrics explored in the graphs. </p>
           
           <p align="justify">This is mainly due to the increased disposable income as a result of increased per capita income.</p>
