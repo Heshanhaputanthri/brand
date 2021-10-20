@@ -6,6 +6,7 @@
  "data": {
  "url": "https://raw.githubusercontent.com/Heshanhaputanthri/brand/main/data/2020-Happy-GDP.csv"
  },
+ "config" : {"background": "#FAEBD7"},
  "mark": "circle",
  "encoding": {
  "x": {
