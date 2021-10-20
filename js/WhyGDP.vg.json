@@ -6,6 +6,21 @@
  "data": {
  "url": "https://raw.githubusercontent.com/Heshanhaputanthri/brand/main/data/2020-Happy-GDP.csv"
  },
+ "params": [
+ {
+ "name": "Freedom_Above",
+ "value": 0,
+ "bind": {
+ "input": "range",
+ "min": 0.4,
+ "max": 0.99,
+ "step": 0.01,
+ "name": "Freedom: "
+ }
+ }
+ ],
+ "transform": [ {"filter": "datum.LifeChoiceFreedom > Freedom_Above"}],
+
  "config" : {"background": "#FAEBD7"},
  "mark": "circle",
  "encoding": {
@@ -20,7 +35,7 @@
  "color": {
  "field": "LifeChoiceFreedom",
  "type": "quantitative",
- "scale": {"range": ["red", "blue"]},
+ "scale": {"domain":[0.4,0.97], "range": ["red", "blue"]},
  "title": "Freedom"
  },
 
