@@ -33,6 +33,7 @@ body {
     clear: both;
     }
 
+
 #map {
 	top:10px;
 	bottom: 10px; 
@@ -46,4 +47,6 @@ body {
 .lw { font-size: 50px; }
 .lv { font-size: 35px; }
 .small { font-size: 20px; }
+.red {color: #FF0000;}
+.blue {color: #0000FF;}
 
