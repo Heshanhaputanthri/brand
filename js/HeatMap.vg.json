@@ -19,7 +19,7 @@
       "x": {
           "field": "value",
           "type": "ordinal",
-          "title": "Relative Change in GDP"
+          "title": "Level of GDP/Capita"
       },
       "y": {
           "field": "metric",
