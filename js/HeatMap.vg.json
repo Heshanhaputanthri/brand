@@ -29,7 +29,7 @@
       "color": {
           "field": "axis",
           "aggregate": "mean",
-          "scale": {"type": "linear", "range": ["#5D3A9B","#E66100"]},
+          "scale": {"type": "linear", "range": ["#E66100","#5D3A9B"]},
           "type": "quantitative",
           "legend": {
               "title": "Indicator Scale"
